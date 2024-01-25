@@ -1,0 +1,43 @@
+{
+  "name": "express-typescript-boilerplate",
+  "description": "Express and typescript boilerplate quickstart with live reload",
+  "version": "0.0.1",
+  "license": "WTFPL",
+  "private": false,
+  "main": "src/app.ts",
+  "author": {
+    "name": "Richard Jeffords",
+    "email": "rajeffords@gmail.com",
+    "url": "https://richard.pizza"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "scripts": {
+    "start": "node dist/app.js",
+    "build": "tsc && cp -r src/public dist/public",
+    "watch": "nodemon --ignore public",
+    "ngrok": "ngrok http 3000"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.22.20",
+    "@babel/node": "^7.22.19",
+    "@babel/preset-env": "^7.22.20",
+    "@types/connect-livereload": "^0.6.3",
+    "@types/cors": "^2.8.17",
+    "@types/dotenv": "^8.2.0",
+    "@types/express": "^4.17.21",
+    "@types/livereload": "^0.9.5",
+    "@types/node": "^20.10.4",
+    "connect-livereload": "^0.6.1",
+    "livereload": "^0.9.3",
+    "nodemon": "^3.0.1",
+    "tslib": "^2.6.2",
+    "typescript": "^5.3.3"
+  }
+}
