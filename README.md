@@ -4,7 +4,7 @@
 
 This is a minimal boilerplate for messing with Express and Typescript. Both frontend and backend live reload.
 
-Ngrok is throw in too in case you want to use it for some reason (e.g. testing webhooks).
+Ngrok is thrown in too, in case you want to use it for some reason (e.g. testing webhooks).
 
 ## Usage
 
