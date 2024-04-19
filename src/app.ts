@@ -36,6 +36,13 @@ app.post("*", (req: Request, res: Response, next: NextFunction) => {
   res.status(200).send("[accepted]")
 })
 
-app.listen(process.env.PORT, () =>
-  console.log(`express is listening on port ${ process.env.PORT }!`),
-)
+app.listen(process.env.PORT || 3000, () => {
+  if (!process.env.PORT) {
+    console.warn("\x1b[31m%s\x1b[0m", "It looks like you do not have a .env file or have not set the PORT environment variable.")
+    console.warn("\x1b[31m%s\x1b[0m", "Please create a .env file in the root of the project and add a PORT variable with the desired port number.")
+    console.log("\x1b[35m%s\x1b[0m", "fallback: express is listening on port 3000")
+  }
+  else {
+    console.log("\x1b[35m%s\x1b[0m", `express is listening on port ${ process.env.PORT }!`)
+  }
+})
