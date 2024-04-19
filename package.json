@@ -16,8 +16,9 @@
   "scripts": {
     "start": "node dist/app.js",
     "build": "tsc && cp -r src/public dist/public",
+    "dev": "nodemon --ignore public",
     "watch": "nodemon --ignore public",
-    "ngrok": "ngrok http 3000"
+    "ngrok": "source .env && cross-env ngrok http $PORT"
   },
   "dependencies": {
     "cors": "^2.8.5",
@@ -35,6 +36,7 @@
     "@types/livereload": "^0.9.5",
     "@types/node": "^20.10.4",
     "connect-livereload": "^0.6.1",
+    "cross-env": "^7.0.3",
     "livereload": "^0.9.3",
     "nodemon": "^3.0.1",
     "tslib": "^2.6.2",
